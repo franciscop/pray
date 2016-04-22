@@ -1,6 +1,6 @@
 {
   "name": "pray",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small library to test that an answer is as expected",
   "main": "index.js",
   "scripts": {
