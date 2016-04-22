@@ -1,0 +1,29 @@
+{
+  "name": "pray",
+  "version": "1.0.0",
+  "description": "A small library to test that an answer is as expected",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/franciscop/pray.git"
+  },
+  "keywords": [
+    "pray",
+    "test",
+    "expect",
+    "same"
+  ],
+  "author": "Francisco Presencia Fandos <developerfrancisco@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/franciscop/pray/issues"
+  },
+  "homepage": "https://github.com/franciscop/pray#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
