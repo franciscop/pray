@@ -1,8 +1,8 @@
 {
   "name": "pray",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A small library to test that an answer is as expected",
-  "main": "index.js",
+  "main": "pray.js",
   "scripts": {
     "test": "mocha test.js"
   },
