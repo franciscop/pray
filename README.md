@@ -1,34 +1,58 @@
 # Pray
 
-A super simple expectation library. Pray that the second invocation follows the first one. It works perfectly with [test-controller](https://github.com/franciscop/test-controller).
+React asynchronous components:
 
 ```js
-// Perfect
-pray('a', 'b', 'c')('a', 'b', 'c');
+// Books.js
+import React from 'react';
+import pray from 'pray';
 
-// Throws exception
-pray('a', 'b', 'c')('a', 'b', 'D');
-```
+// Notice the "async":
+export default pray(async () => {
+  const books = await fetch('/books').then(res => res.json());
 
-It also accepts a callback with the real element so you can do it yourself:
-
-```js
-// Works
-pray('a', function(actual){
-  expect(actual).to.equal(1);
-})('a', 1);
-
-// Throws error
-pray('a', function(actual){
-  expect(actual).not.to.equal(1);
-})('a', 1);
-```
-
-
-An example with [test-controller](https://github.com/franciscop/test-controller):
-
-```js
-it("Checking for empty users", function(done){
-  test(controller.login).post({}, pray(null, 'json', { error: "No user" }, done));
+  return (
+    <ul>
+      {books.map(book => <li>{book.title}</li>)}
+    </ul>
+  )
 });
+```
+
+Then in your main code import and use it as usual:
+
+```js
+// App.js
+import React from 'react';
+import Books from './Books';
+
+export default () => (
+  <Books />
+);
+```
+
+## Spinner
+
+You can add a spinner for whenever the main component is still loading:
+
+```js
+//
+const Spinner = () => 'Loading...';
+
+// Note that we pass the component, not the instance:
+export default pray(Spinner, async () => {
+  ...
+});
+```
+
+You can also assign it on render time:
+
+```js
+// App.js
+const Spinner = () => "Loading...";
+
+// Note that here we pass the instance, not the component:
+export default () => (
+  <Books fallback={<Spinner />} />
+);
 ```
