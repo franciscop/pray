@@ -5,8 +5,7 @@
   "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
   "main": "index.min.js",
   "scripts": {
-    "build": "webpack -c",
-    "test": "jest --coverage --forceExit"
+    "build": "webpack -c"
   },
   "keywords": [
     "pray",
