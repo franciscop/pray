@@ -1,4 +1,4 @@
-# Pray
+# Pray [![npm install pray](https://img.shields.io/badge/npm%20install-pray-blue.svg)](https://www.npmjs.com/package/pray) [![gzip size](https://img.badgesize.io/franciscop/pray/master/index.min.js.svg?compression=gzip)](https://github.com/franciscop/pray/blob/master/index.min.js)
 
 React asynchronous components:
 
