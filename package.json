@@ -1,6 +1,6 @@
 {
   "name": "pray",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "React asynchronous components",
   "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
   "main": "index.min.js",
